@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/etAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Principal Amount"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/etROI"
+        tools:layout_editor_absoluteY="216dp" />
+
+    <EditText
+        android:id="@+id/etROI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Rate of Interest"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toStartOf="@+id/etAmount"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="216dp" />
+
+    <TextView
+        android:id="@+id/tvNOY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Number of Year"
+        app:layout_constraintBottom_toTopOf="@+id/sbNumberOfYear"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etROI"
+        app:layout_constraintVertical_bias="0.688" />
+
+    <SeekBar
+        android:id="@+id/sbNumberOfYear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:max="100"
+        android:min="1"
+        android:progress="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etROI" />
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate EMI"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sbNumberOfYear"
+        app:layout_constraintVertical_bias="0.129" />
+
+    <TextView
+        android:id="@+id/tvShowNOY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:text="1"
+        app:layout_constraintBottom_toTopOf="@+id/sbNumberOfYear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.033"
+        app:layout_constraintStart_toEndOf="@+id/tvNOY"
+        app:layout_constraintTop_toBottomOf="@+id/etROI"
+        app:layout_constraintVertical_bias="0.672" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
